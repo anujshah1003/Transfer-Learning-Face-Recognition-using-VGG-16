@@ -1,6 +1,6 @@
 # Transfer-Learning-Face-Recognition-using-VGG-16
 This repository shows how we can use transfer learning in keras with the example of training a face recognition model using VGG-16 pre-trained weights.The example shown here is based on Refik Can Malli keras-vggface: https://github.com/rcmalli/keras-vggface.
-The vggface is the famous VGG-16 CNN trained on 2,622 different faces 
+The vggface is the famous VGG-16 CNN trained on 2.6 million images of 2,622 different identities. the paper Deep Face Recognition describes it well : http://www.robots.ox.ac.uk/~vgg/publications/2015/Parkhi15/parkhi15.pdf
 
 vgg face descriptor: http://www.robots.ox.ac.uk/~vgg/software/vgg_face/
 
