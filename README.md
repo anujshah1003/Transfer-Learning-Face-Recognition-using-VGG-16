@@ -12,16 +12,18 @@ Definition : Given a source domain Ds and a learning task Ts, a target domain Dt
 
 A good explanation of how to use transfer learning practically is explained in http://cs231n.github.io/transfer-learning/
 
-The vggface model weights is loaded as such without including the last layers by calling VGGFace(include_top=False, weights='vggface',
-          input_tensor=None) from keras-vggface : https://github.com/rcmalli/keras-vggface.
+The vggface model weights is loaded as such without including the last layers by calling
+
+	VGGFace(include_top=False, weights='vggface',input_tensor=None) 
+
+from keras-vggface : https://github.com/rcmalli/keras-vggface.
           
 only the last three dense layers are fine tuned as per our requirement. All the layers of the vggface network are made non-trainable except the last three layers  by using 
 
-layer_count = 0
-for layer in custom_vgg_model.layers:
-    layer_count = layer_count+1
-				
-for l in range(layer_count-3):
-	custom_vgg_model.layers[l].trainable=False
+	layer_count = 0
+	for layer in custom_vgg_model.layers:
+		layer_count = layer_count+1
+	for l in range(layer_count-3):
+		custom_vgg_model.layers[l].trainable=False
   
  
